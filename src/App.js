@@ -5,8 +5,10 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 200px;
-  margin: 0 auto;
+  width: 23rem;
+  padding: 2.4rem;
+  border: 1px solid ${({ theme }) => theme.COLORS.BLUE_700};
+  border-radius: 0.8rem;
 
   .display,
   .complete-operation {
@@ -15,8 +17,15 @@ export const Container = styled.div`
     border: 1px solid black;
     margin-bottom: 10px;
     padding: 5px;
+    border-radius: 0.8rem;
     text-align: right;
     overflow: auto;
+    background: ${({ theme }) => theme.COLORS.WHITE_100};
+  }
+
+  .display::-webkit-scrollbar,
+  .complete-operation::-webkit-scrollbar {
+    display: none;
   }
 
   .complete-operation {
@@ -31,5 +40,12 @@ export const Container = styled.div`
 
   button {
     padding: 10px;
+    border: none;
+    border-radius: 0.8rem;
+    background: ${({ theme }) => theme.COLORS.BLUE_700};
+  }
+
+  button:hover {
+    filter: brightness(1.1);
   }
 `;
