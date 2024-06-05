@@ -88,18 +88,24 @@ export function App() {
       <div className="display">{currentValue}</div>
 
       <div className="buttons">
-        <button onClick={handleClear}>AC</button>
+        <button onClick={handleCalculate}>=</button>
+        <button onClick={handleClear}>CE</button>
+
         {keypadNumbers.map((num) => (
-          <button key={num} onClick={() => handleClick(num)}>
+          <button className="num" key={num} onClick={() => handleClick(num)}>
             {num}
           </button>
         ))}
+
         {operations.map((operation) => (
-          <button key={operation} onClick={() => handleOperation(operation)}>
+          <button
+            className="operation"
+            key={operation}
+            onClick={() => handleOperation(operation)}
+          >
             {operation}
           </button>
         ))}
-        <button onClick={handleCalculate}>=</button>
       </div>
     </Container>
   );

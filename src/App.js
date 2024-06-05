@@ -6,16 +6,16 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   width: 18rem;
-  padding: 0.8rem;
-  border-radius: 0.8rem;
+  padding: 0.4rem;
+  border-radius: 0.2rem;
   background: ${({ theme }) => theme.COLORS.BLUE_100};
 
   .display,
   .complete-operation {
     width: 100%;
     margin-bottom: 10px;
-    padding: .5rem;
-    border-radius: 0.8rem;
+    padding: 0.5rem;
+    border-radius: 0.4rem;
     text-align: right;
     overflow: auto;
   }
@@ -29,7 +29,7 @@ export const Container = styled.div`
   .complete-operation {
     height: 2.4rem;
     font-size: 1.2rem;
-    color: ${({ theme }) => theme.COLORS.GRAY_100};
+    color: ${({ theme }) => theme.COLORS.GRAY_700};
   }
 
   .display::-webkit-scrollbar,
@@ -40,14 +40,23 @@ export const Container = styled.div`
   .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0.8rem;
+    gap: 0.4rem;
+  }
+
+  .buttons button:first-child {
+    background: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
   button {
-    padding: 1rem;
+    width: 4rem;
+    height: 2.4rem;
     border: none;
-    border-radius: 0.8rem;
+    border-radius: 0.4rem;
     background: ${({ theme }) => theme.COLORS.BLUE_700};
+  }
+
+  button.operation {
+    opacity: 0.4;
   }
 
   button:hover {
