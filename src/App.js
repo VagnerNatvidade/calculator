@@ -28,7 +28,7 @@ export const Container = styled.div`
   }
 
   .complete-operation {
-    height: 2.4rem;
+    height: 2rem;
     font-size: 1.2rem;
     color: ${({ theme }) => theme.COLORS.GRAY_200};
   }

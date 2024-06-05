@@ -70,7 +70,7 @@ export function App() {
       `${pendingValue} ${pendingOperation} ${currentValue} = ${result} `
     );
 
-    setCurrentValue(result.toString());
+    setCurrentValue(String(result));
     setPendingOperation(null);
     setPendingValue(null);
   };
