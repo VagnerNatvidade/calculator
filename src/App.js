@@ -5,22 +5,31 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 23rem;
-  padding: 2.4rem;
-  border: 1px solid ${({ theme }) => theme.COLORS.BLUE_700};
+  width: 18rem;
+  padding: 0.8rem;
   border-radius: 0.8rem;
+  background: ${({ theme }) => theme.COLORS.BLUE_100};
 
   .display,
   .complete-operation {
     width: 100%;
-    height: 48px;
-    border: 1px solid black;
     margin-bottom: 10px;
-    padding: 5px;
+    padding: .5rem;
     border-radius: 0.8rem;
     text-align: right;
     overflow: auto;
-    background: ${({ theme }) => theme.COLORS.WHITE_100};
+  }
+
+  .display {
+    height: 3.8rem;
+    font-size: 2.4rem;
+    color: ${({ theme }) => theme.COLORS.WHITE_100};
+  }
+
+  .complete-operation {
+    height: 2.4rem;
+    font-size: 1.2rem;
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
   .display::-webkit-scrollbar,
@@ -28,18 +37,14 @@ export const Container = styled.div`
     display: none;
   }
 
-  .complete-operation {
-    height: 32px;
-  }
-
   .buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
+    gap: 0.8rem;
   }
 
   button {
-    padding: 10px;
+    padding: 1rem;
     border: none;
     border-radius: 0.8rem;
     background: ${({ theme }) => theme.COLORS.BLUE_700};

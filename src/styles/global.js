@@ -17,6 +17,5 @@ export default createGlobalStyle`
     place-content: center;
     height: 100vh;
     font-size: 16px;
-    background: ${({ theme }) => theme.COLORS.BLUE_100};
   }
 `;
