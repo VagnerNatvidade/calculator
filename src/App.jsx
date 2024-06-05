@@ -21,7 +21,7 @@ export function App() {
       }
     });
 
-    setCompleteOperation((prevOperation) => prevOperation + value);
+    setCompleteOperation((prevOperation) => prevOperation);
   };
 
   const handleOperation = (operation) => {
@@ -82,6 +82,10 @@ export function App() {
     setCompleteOperation("");
   };
 
+  const handleClearCurrentValue = () => {
+    setCurrentValue("0");
+  };
+
   return (
     <Container className="calculator">
       <div className="complete-operation">{completeOperation}</div>
@@ -94,12 +98,8 @@ export function App() {
               {num}
             </button>
           ))}
-          <button className="del" onClick={handleClear}>
-            CE
-          </button>
-          <button className="del" onClick={""}>
-            C
-          </button>
+          <button onClick={handleClear}>CE</button>
+          <button onClick={handleClearCurrentValue}>C</button>
         </div>
 
         <div>
