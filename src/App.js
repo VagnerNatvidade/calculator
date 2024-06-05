@@ -5,17 +5,18 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 18rem;
-  padding: 0.4rem;
-  border-radius: 0.2rem;
-  background: ${({ theme }) => theme.COLORS.BLUE_100};
+  width: 16.5rem;
+  padding: 0.1rem;
+  border-radius: 0.1rem;
+  background: ${({ theme }) => theme.COLORS.GRAY_100};
+  box-shadow: 0 0.5rem 1rem #80808080;
 
   .display,
   .complete-operation {
     width: 100%;
     margin-bottom: 10px;
     padding: 0.5rem;
-    border-radius: 0.4rem;
+    border-radius: 0.1rem;
     text-align: right;
     overflow: auto;
   }
@@ -23,13 +24,13 @@ export const Container = styled.div`
   .display {
     height: 3.8rem;
     font-size: 2.4rem;
-    color: ${({ theme }) => theme.COLORS.WHITE_100};
+    color: ${({ theme }) => theme.COLORS.GRAY_300};
   }
 
   .complete-operation {
     height: 2.4rem;
     font-size: 1.2rem;
-    color: ${({ theme }) => theme.COLORS.GRAY_700};
+    color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
 
   .display::-webkit-scrollbar,
@@ -39,27 +40,44 @@ export const Container = styled.div`
 
   .buttons {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.4rem;
+    grid-template-columns: 3fr 1fr;
   }
 
-  .buttons button:first-child {
-    background: ${({ theme }) => theme.COLORS.GRAY_100};
+  .buttons div:first-child {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.1rem;
+  }
+
+  .buttons div:nth-child(2) {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+    float: left;
+    margin-left: .1rem;
   }
 
   button {
     width: 4rem;
     height: 2.4rem;
     border: none;
-    border-radius: 0.4rem;
-    background: ${({ theme }) => theme.COLORS.BLUE_700};
+    border-radius: 0.1rem;
+    background: ${({ theme }) => theme.COLORS.GRAY_300};
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
   button.operation {
     opacity: 0.4;
+    background: ${({ theme }) => theme.COLORS.GRAY_700};
   }
 
   button:hover {
-    filter: brightness(1.1);
+    filter: brightness(1.2);
+  }
+
+  .equals {
+    width: 100%;
+    margin-top: 0.1rem;
+    background: ${({ theme }) => theme.COLORS.ORANGE_100};
   }
 `;
