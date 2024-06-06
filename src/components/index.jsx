@@ -67,7 +67,7 @@ export function Calculator() {
     }
 
     setCompleteOperation(
-      `${pendingValue} ${pendingOperation} ${currentValue} = ${result} `
+      `${pendingValue} ${pendingOperation} ${currentValue} =`
     );
 
     setCurrentValue(String(result));
