@@ -32,7 +32,7 @@ export function App() {
   };
 
   const handleCalculate = () => {
-    if (!pendingOperation || !pendingValue) {
+    if (!pendingValue || !pendingOperation) {
       return;
     }
 
@@ -55,8 +55,8 @@ export function App() {
         if (num2 !== 0) {
           result = num1 / num2;
         } else {
-          setCurrentValue("Error");
-          setCompleteOperation("Error");
+          setCurrentValue("Não é possível dividir por zero");
+          setCompleteOperation("Não é possível dividir por zero");
           setPendingOperation(null);
           setPendingValue(null);
         }
