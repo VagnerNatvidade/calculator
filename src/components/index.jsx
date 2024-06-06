@@ -14,12 +14,16 @@ export function Calculator() {
 
   const handleClick = (value) => {
     setCurrentValue((prevValue) => {
-      if (prevValue === "0") {
+      if (prevValue === "0" || pendingValue) {
         return value;
       } else {
         return prevValue + value;
       }
     });
+
+    if (pendingValue && !pendingOperation) {
+      setCompleteOperation("");
+    }
 
     setCompleteOperation((prevOperation) => prevOperation);
   };
@@ -30,7 +34,7 @@ export function Calculator() {
     setPendingValue(currentValue);
     setCurrentValue("0");
   };
-
+''
   const handleCalculate = () => {
     if (!pendingValue || !pendingOperation) {
       return;
@@ -71,14 +75,14 @@ export function Calculator() {
     );
 
     setCurrentValue(String(result));
+    setPendingValue(String(result));
     setPendingOperation(null);
-    setPendingValue(null);
   };
 
   const handleClear = () => {
     setCurrentValue("0");
     setPendingOperation(null);
-    setPendingOperation(null);
+    setPendingValue(null);
     setCompleteOperation("");
   };
 
