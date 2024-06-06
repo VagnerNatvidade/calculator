@@ -5,7 +5,7 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 16.5rem;
+  width: 40rem;
   padding: 0.1rem;
   border-radius: 0.1rem;
   background: ${({ theme }) => theme.COLORS.GRAY_100};
@@ -22,14 +22,14 @@ export const Container = styled.div`
   }
 
   .display {
-    height: 3.8rem;
-    font-size: 2.4rem;
+    height: 8rem;
+    font-size: 4.8rem;
     color: ${({ theme }) => theme.COLORS.GRAY_300};
   }
 
   .complete-operation {
-    height: 2rem;
-    font-size: 1.2rem;
+    height: 3.2rem;
+    font-size: 2.4rem;
     color: ${({ theme }) => theme.COLORS.GRAY_200};
   }
 
@@ -58,8 +58,8 @@ export const Container = styled.div`
   }
 
   button {
-    width: 4rem;
-    height: 2.4rem;
+    width: 9.87rem;
+    height: 7rem;
     border: none;
     border-radius: 0.1rem;
     background: ${({ theme }) => theme.COLORS.GRAY_300};
