@@ -34,7 +34,6 @@ export function Calculator() {
     setPendingValue(currentValue);
     setCurrentValue("0");
   };
-''
   const handleCalculate = () => {
     if (!pendingValue || !pendingOperation) {
       return;
