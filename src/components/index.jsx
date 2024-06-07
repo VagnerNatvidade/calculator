@@ -34,6 +34,7 @@ export function Calculator() {
     setPendingValue(currentValue);
     setCurrentValue("0");
   };
+
   const handleCalculate = () => {
     if (!pendingValue || !pendingOperation) {
       return;
@@ -58,8 +59,8 @@ export function Calculator() {
         if (num2 !== 0) {
           result = num1 / num2;
         } else {
-          setCurrentValue("Não é possível dividir por zero");
-          setCompleteOperation("Não é possível dividir por zero");
+          setCurrentValue(String((result = "Erro")));
+          setCompleteOperation(String((result = "Erro")));
           setPendingOperation(null);
           setPendingValue(null);
         }
