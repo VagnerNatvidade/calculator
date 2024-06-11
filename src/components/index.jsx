@@ -13,17 +13,17 @@ export function Calculator() {
   const operations = ["+", "-", "*", "/"];
 
   const handleClick = (value) => {
+    if (pendingValue && !pendingOperation) {
+      return alert("Limpe o calculo antes de começar outro.");
+    }
+
     setCurrentValue((prevValue) => {
-      if (prevValue === "0" || pendingValue) {
+      if (prevValue === "0") {
         return value;
       } else {
         return prevValue + value;
       }
     });
-
-    if (pendingValue && !pendingOperation) {
-      setCompleteOperation("");
-    }
 
     setCompleteOperation((prevOperation) => prevOperation);
   };
